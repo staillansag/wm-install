@@ -87,7 +87,10 @@ Ensure the container is started and connect to it as root. You can for instance 
 Ensure the /opt/shared folder exists and that you see files in it (you should have exactly the same files you previously placed in the host shared folder.)
 If it's empty or missing then your volume mapping in the docker compose yaml file is wrong and you need to fix it.
 
-Create the wm user.
+Create the wm user:
+```
+useradd wm
+```
 
 Create the following folders and change ownership to wm:
 - /opt/softwareag
@@ -98,10 +101,12 @@ mkdir /opt/softwareag && chown wm:wm /opt/softwareag
 mkdir /opt/softwareagupdater && chown wm:wm /opt/softwareagupdater
 ```
 
+Change ownership of the SAG installer and update manager and make them executable (they are two bin files in the /opt/shared folder)
+```
+chown wm:wm *.bin && chmod u+x *.bin
+```
 
-Make wm the owner of these folders
-
-Install props with this command
+Install procps with this command
 ```
 yum install -y procps
 ```
