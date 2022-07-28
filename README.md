@@ -127,3 +127,8 @@ Start the installation process with this command (assuming your installation ima
 ./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/shared/softwareag -writeScript wmInstallScript
 ```
 
+```
+opt/softwareag/UniversalMessaging/tools/runner/runUMTool.sh CreateConnectionFactory -rname=nsp://localhost:9000 -factoryname=local_um
+```
+
+
