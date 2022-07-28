@@ -103,7 +103,12 @@ mkdir /opt/softwareagupdater && chown wm:wm /opt/softwareagupdater
 
 Change ownership of the SAG installer and update manager and make them executable (they are two bin files in the /opt/shared folder)
 ```
-chown wm:wm *.bin && chmod u+x *.bin
+chown wm:wm *.bin && chmod u+x /opt/shared/*.bin
+```
+
+Copy the two docker-init.sh and docker-stop.sh scripts (which are in the scripts folder of the git repo) to the root folder /, then make them executable.
+```
+chown wm:wm ./wm-install/scripts/*.sh && chmod u+x ./wm-install/scripts/*.sh && cp ./wm-install/scripts/*.sh /
 ```
 
 Install procps with this command
@@ -111,9 +116,6 @@ Install procps with this command
 yum install -y procps
 ```
 
-Make the SAG installer and update manager executable for the wm user (they are in the /opt/shared folder)
-
-Copy the two docker-init.sh and docker-stop.sh scripts (which are in the scripts folder of the git repo) to the root folder /, then make them executable.
 
 ##    Install webMethods and the addons of your choice
 Ensure the container is started and connect to with the wm user you previously created. You can for instance do it with Portainer.
