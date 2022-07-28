@@ -33,6 +33,19 @@ We provide docker compose files for Oracle XE and MS SQL here, choose one of the
 - docker-compose-webmethods1011-mssql.yml
 - docker-compose-webmethods1011-oracle.yml
 
+```
+docker-compose -f docker-compose-webmethods1011-mssql.yml up -d
+```
+
+or
+
+```
+docker-compose -f docker-compose-webmethods1011-oracle.yml up -d
+```
+
+
+
+
 Then we create the Linux guest image using this docker compose file: docker-compose-webmethods1011-servers.yml.
 
 This container uses a volume that maps the shared folder on the host and the shared folder on the guest:
