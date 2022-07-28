@@ -2,7 +2,8 @@
 
 ##    Create the installation image
 Run the SAG installer on your host to create an image for your webMethods installation.
-Select the RHEL x64 platform.
+Go to advanced options
+https://github.com/staillansag/wm-install/blob/main/screenshots/AdvancedOptions_CreateImage.png
 
 ##    Setup Docker on the host machine
 Configure Docker resources to allow (if possible) 4 vCPUs and 8 Gb RAM. It may work with less resources, but I haven't tested it.
