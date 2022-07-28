@@ -108,7 +108,7 @@ chown wm:wm *.bin && chmod u+x /opt/shared/*.bin
 
 Copy the two docker-init.sh and docker-stop.sh scripts (which are in the scripts folder of the git repo) to the root folder /, then make them executable.
 ```
-chown wm:wm ./wm-install/scripts/*.sh && chmod u+x ./wm-install/scripts/*.sh && cp ./wm-install/scripts/*.sh /
+chown wm:wm ./wm-install/scripts/*.sh && chmod u+x ./wm-install/scripts/*.sh && cp --preserve=mode,ownership ./wm-install/scripts/*.sh /
 ```
 
 Install procps with this command
