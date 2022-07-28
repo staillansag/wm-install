@@ -1,0 +1,15 @@
+
+version: '3'
+services:
+    oracle:
+      container_name: webmethods1011_oracle
+      image: gvenzl/oracle-xe:21.3.0
+      stdin_open: true # docker run -i
+      tty: true        # docker run -t
+      hostname: webmethods_oracle
+      ports:
+        - "1521:1521"
+      environment:
+        - ORACLE_PASSWORD=c1olleCtor8
+      volumes:
+        - /opt/shared:/opt/shared
