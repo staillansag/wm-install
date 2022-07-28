@@ -25,5 +25,31 @@ We provide docker compose files for Oracle XE and MS SQL here, choose one of the
 - docker-compose-webmethods1011-oracle.yml
 
 Then we create the Linux guest image using this docker compose file: docker-compose-webmethods1011-servers.yml
+This container uses a volume that maps the shared folder on the host and the shared folder on the guest:
+```
+      volumes:
+        - /opt/shared:/opt/shared
+```
+
+If you've chosen another location than /opt/shared for your shared folder on the host, make sure to update the path (the part that's at the left of the semi colon.)
+Leave the part that's at the right of the semi colon unchanged (location of shared folder on the guest.)
 
 Note: these containers are optimized for usability and not security (they're meant to be used for development activities and have a lot of ports that are exposed.)
+
+## Connect as root to the webmethods1011servers container (Linux guest)
+Ensure the container is started and connect to it as root. You can for instance do it with Portainer.
+
+Ensure the /opt/shared folder exists and that you see files in it (you should have exactly the same files you previously placed in the host shared folder.)
+If it's empty or missing then your volume mapping in the docker compose yaml file is wrong and you need to fix it.
+
+Create the wm user.
+
+Create the following folders:
+- /opt/softwareag
+- /opt/softwareagupdater
+Make wm the owner of these folders
+
+Install props with this command
+```
+yum install -y procps
+
