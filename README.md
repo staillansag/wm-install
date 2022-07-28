@@ -1,24 +1,29 @@
 # Running webMethods on Docker
 
-##  Setup Docker on the host machine
+##    Create the installation image
+Run the SAG installer on your host to create an image for your webMethods installation.
+Select the RHEL x64 platform.
+
+##    Setup Docker on the host machine
 Configure Docker resources to allow (if possible) 4 vCPUs and 8 Gb RAM. It may work with less resources, but I haven't tested it.
 Ensure docker-compose is installed on your host. if not, go to https://docs.docker.com/compose/install/
 
-##  Install and configure Portainer
+##    Install and configure Portainer
 it's not strictly required, but it makes the management of Docker assets a lot easier.
 See https://www.portainer.io
 
-##  Create a folder in the host for shared assets
+##    Create a folder in the host for shared assets
 This folder will allow us to share data between the host machine and the Docker containers.
 In what follows we use /opt/shared
 
-##  Add content to the shared folder
+##    Add content to the shared folder
 Clone the git repo and place its content in the shared folder.
 Also place in the shared folder:
-- the SAG installer and updater (for Linux x86_64)
-- the license files
+-     the zipped webMethods installation image
+-     the SAG installer and updater (the one for your guest, which is Linux x86_64)
+-     the license files
 
-##  Create the Docker containers
+##    Create the Docker containers
 We start with the database.
 We provide docker compose files for Oracle XE and MS SQL here, choose one of these and create the container:
 - docker-compose-webmethods1011-mssql.yml
