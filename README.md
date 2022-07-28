@@ -66,6 +66,9 @@ Ensure the database container is started (webmethods1011_mssql or webmethods1011
 
 In the host machine, execute the SAG database configuration tool to initialize the database.
 
+Here's a connection example for MS SQL:
+![Database configuration](https://github.com/staillansag/wm-install/blob/main/screenshots/DatabaseConfigurator.png)
+
 ##    Prepare the webmethods1011servers container for installation
 Ensure the container is started and connect to it as root. You can for instance do it with Portainer.
 
