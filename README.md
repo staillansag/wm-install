@@ -37,7 +37,7 @@ Leave the part that's at the right of the semi colon unchanged (location of shar
 
 Note: these containers are optimized for usability and not security (they're meant to be used for development activities and have a lot of ports that are exposed.)
 
-## Connect as root to the webmethods1011servers container (Linux guest)
+## Prepare the webmethods1011servers container for installation (Linux guest)
 Ensure the container is started and connect to it as root. You can for instance do it with Portainer.
 
 Ensure the /opt/shared folder exists and that you see files in it (you should have exactly the same files you previously placed in the host shared folder.)
@@ -53,4 +53,7 @@ Make wm the owner of these folders
 Install props with this command
 ```
 yum install -y procps
+```
+
+xxx
 
