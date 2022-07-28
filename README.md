@@ -127,6 +127,9 @@ Start the installation process with this command (assuming your installation ima
 ./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/softwareag -writeScript wmInstallScript
 ```
 
+Assuming your installation image is similar to mine, you can also use this install script: https://github.com/staillansag/wm-install/blob/main/install/wmInstallScript
+
+Create the UM connection factory with this command:
 ```
 opt/softwareag/UniversalMessaging/tools/runner/runUMTool.sh CreateConnectionFactory -rname=nsp://localhost:9000 -factoryname=local_um
 ```
