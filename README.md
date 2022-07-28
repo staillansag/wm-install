@@ -43,6 +43,17 @@ or
 docker-compose -f docker-compose-webmethods1011-oracle.yml up -d
 ```
 
+The database admin user password is configured in the Docker compose yaml files. You are of course free to change these passwords.
+
+For MS SQL:
+```
+        - SA_PASSWORD=Manage100!
+```
+For Oracle
+```
+        - ORACLE_PASSWORD=c1olleCtor8
+```
+
 Then we create the Linux guest image using this docker compose file: docker-compose-webmethods1011-servers.yml.
 
 This container uses a volume that maps the shared folder on the host and the shared folder on the guest:
@@ -68,6 +79,7 @@ In the host machine, execute the SAG database configuration tool to initialize t
 
 Here's a connection example for MS SQL:
 ![Database configuration](https://github.com/staillansag/wm-install/blob/main/screenshots/DatabaseConfigurator.png)
+
 
 ##    Prepare the webmethods1011servers container for installation
 Ensure the container is started and connect to it as root. You can for instance do it with Portainer.
