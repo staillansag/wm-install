@@ -1,0 +1,41 @@
+
+version: '3'
+services:
+    wm:
+      container_name: webmethods1011servers
+      image: redhat/ubi8:latest
+      stdin_open: true # docker run -i
+      tty: true        # docker run -t
+      hostname: localhost
+      ports:
+        - "5555:5555"
+        - "5543:5543"
+        - "9999:9999"
+        - "9100:9100"
+        - "1212:1212"
+        - "1414:1414"
+        - "7001:7001"
+        - "7002:7002"
+        - "9000:9000"
+        - "8585:8585"
+        - "12503:12503"
+        - "15000:15000"
+        - "7011:7011"
+        - "7012:7012"
+        - "15001:15001"
+        - "1515:1515"
+        - "15005:15005"
+        - "6666:6666"
+        - "1026:1026"
+        - "1027:1027"
+        - "6710:6710"
+      environment:
+        - INSTANCE_NAME=default
+        - JAVA_HOME=/opt/softwareag/jvm/jvm
+        - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        - LD_LIBRARY_PATH=/opt/softwareag/IntegrationServer/instances/default/lib/jars/
+      volumes:
+        - /opt/shared:/opt/shared
+      command:
+        - /bin/bash
+ 
