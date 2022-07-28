@@ -37,7 +37,12 @@ Leave the part that's at the right of the semi colon unchanged (location of shar
 
 Note: these containers are optimized for usability and not security (they're meant to be used for development activities and have a lot of ports that are exposed.)
 
-## Prepare the webmethods1011servers container for installation (Linux guest)
+##    Setup the database
+Ensure the database container is started (webmethods1011_mssql or webmethods1011_oracle, depending on which DB you've chosen.)
+
+In the host machine, execute the SAG database configuration tool to initialize the database.
+
+##    Prepare the webmethods1011servers container for installation
 Ensure the container is started and connect to it as root. You can for instance do it with Portainer.
 
 Ensure the /opt/shared folder exists and that you see files in it (you should have exactly the same files you previously placed in the host shared folder.)
@@ -55,5 +60,10 @@ Install props with this command
 yum install -y procps
 ```
 
-xxx
+Make the SAG installer and update manager executable for the wm user (they are in the /opt/shared folder)
+
+Copy the two docker-init.sh and docker-stop.sh scripts (which are in the scripts folder of the git repo) to the root folder /, then make them executable.
+
+##    Install webMethods and the addons of your choice
+Ensure the container is started and connect to with the wm user you previously created. You can for instance do it with Portainer.
 
