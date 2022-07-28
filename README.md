@@ -2,7 +2,8 @@
 
 ##    Create the installation image
 Run the SAG installer on your host to create an image for your webMethods installation.
-Go to advanced options
+
+Go to advanced options / image:
 ![Create Image](https://github.com/staillansag/wm-install/blob/main/screenshots/AdvancedOptions_CreateImage.png)
 
 ##    Setup Docker on the host machine
