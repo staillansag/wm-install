@@ -129,6 +129,8 @@ Start the installation process with this command (assuming your installation ima
 
 Assuming your installation image is similar to mine, you can also use this install script: https://github.com/staillansag/wm-install/blob/main/install/wmInstallScript
 
+Make sure to change license file locations and names if you use this install script. For the database connection user/password I use WM1011/WM1011, you will also need to update this is you confifured another database user/password.
+
 Create the UM connection factory with this command:
 ```
 opt/softwareag/UniversalMessaging/tools/runner/runUMTool.sh CreateConnectionFactory -rname=nsp://localhost:9000 -factoryname=local_um
