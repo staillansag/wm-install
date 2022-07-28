@@ -124,7 +124,7 @@ Place yourself in the /opt/shared folder
 
 Start the installation process with this command (assuming your installation image is named webmethods1011_RHELx64.zip):
 ```
-./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/shared/softwareag -writeScript wmInstallScript
+./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/softwareag -writeScript wmInstallScript
 ```
 
 ```
