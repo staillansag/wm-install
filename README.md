@@ -43,9 +43,6 @@ or
 docker-compose -f docker-compose-webmethods1011-oracle.yml up -d
 ```
 
-
-
-
 Then we create the Linux guest image using this docker compose file: docker-compose-webmethods1011-servers.yml.
 
 This container uses a volume that maps the shared folder on the host and the shared folder on the guest:
@@ -55,6 +52,11 @@ This container uses a volume that maps the shared folder on the host and the sha
 ```
 
 If you've chosen another location than /opt/shared for your shared folder on the host, make sure to update the path (the part that's at the left of the semi colon.)
+
+```
+docker-compose -f docker-compose-webmethods1011-servers.yml up -d
+
+
 Leave the part that's at the right of the semi colon unchanged (location of shared folder on the guest.)
 
 Note: these containers are optimized for usability and not security (they're meant to be used for development activities and have a lot of ports that are exposed.)
