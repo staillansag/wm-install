@@ -55,7 +55,7 @@ If you've chosen another location than /opt/shared for your shared folder on the
 
 ```
 docker-compose -f docker-compose-webmethods1011-servers.yml up -d
-
+```
 
 Leave the part that's at the right of the semi colon unchanged (location of shared folder on the guest.)
 
