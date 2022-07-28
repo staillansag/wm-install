@@ -22,9 +22,10 @@ In what follows we use /opt/shared
 ##    Add content to the shared folder
 Clone the git repo and place its content in the shared folder.
 Also place in the shared folder:
--     the zipped webMethods installation image
--     the SAG installer and updater (the one for your guest, which is Linux x86_64)
--     the license files
+- the zipped webMethods installation image (which you created earlier)
+- the SAG installer for your guest OS: take the one for the Linux x64 OS
+- the SAG updater for your guest OS: take the one for the Linux x64 OS
+- the license files
 
 ##    Create the Docker containers
 We start with the database.
