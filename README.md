@@ -134,4 +134,9 @@ Create the UM connection factory with this command:
 opt/softwareag/UniversalMessaging/tools/runner/runUMTool.sh CreateConnectionFactory -rname=nsp://localhost:9000 -factoryname=local_um
 ```
 
+##      Start the services
+Run the docker-init.sh script that you placed at the root of the server.
+
+##      Stop the services
+Run the docker-stop.sh script that you placed at the root of the server.
 
