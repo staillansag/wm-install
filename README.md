@@ -120,3 +120,10 @@ yum install -y procps
 ##    Install webMethods and the addons of your choice
 Ensure the container is started and connect to with the wm user you previously created. You can for instance do it with Portainer.
 
+Place yourself in the /opt/shared folder
+
+Start the installation process with this command:
+```
+./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/shared/softwareag -writeScript wmInstallScript
+```
+
