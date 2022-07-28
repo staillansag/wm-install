@@ -89,9 +89,16 @@ If it's empty or missing then your volume mapping in the docker compose yaml fil
 
 Create the wm user.
 
-Create the following folders:
+Create the following folders and change ownership to wm:
 - /opt/softwareag
 - /opt/softwareagupdater
+
+```
+mkdir /opt/softwareag && chown wm:wm /opt/softwareag
+mkdir /opt/softwareagupdater && chown wm:wm /opt/softwareagupdater
+```
+
+
 Make wm the owner of these folders
 
 Install props with this command
