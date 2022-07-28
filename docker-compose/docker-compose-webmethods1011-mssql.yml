@@ -2,7 +2,7 @@
 version: '3'
 services:
     sqlserver:
-      container_name: webmethods1011_db
+      container_name: webmethods1011_mssql
       image: mcr.microsoft.com/mssql/server
       stdin_open: true # docker run -i
       tty: true        # docker run -t
