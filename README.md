@@ -7,6 +7,8 @@ Go to advanced options / Image and use these settings:
 
 ![Create Image](https://github.com/staillansag/wm-install/blob/main/screenshots/AdvancedOptions_CreateImage.png)
 
+You can check the content of the image I created here: https://github.com/staillansag/wm-install/blob/main/install/ImageContents.html
+
 ##    Setup Docker on the host machine
 Configure Docker resources to allow (if possible) 4 vCPUs and 8 Gb RAM. It may work with less resources, but I haven't tested it.
 Ensure docker-compose is installed on your host. if not, go to https://docs.docker.com/compose/install/
@@ -124,10 +126,15 @@ Place yourself in the /opt/shared folder
 
 Start the installation process with this command (assuming your installation image is named webmethods1011_RHELx64.zip):
 ```
-./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/softwareag -writeScript wmInstallScript
+./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/softwareag
 ```
 
 Assuming your installation image is similar to mine, you can also use this install script: https://github.com/staillansag/wm-install/blob/main/install/wmInstallScript
+
+```
+./SoftwareAGInstaller20211015-Linux_x86_64.bin -readImage webmethods1011_RHELx64.zip -installDir /opt/softwareag -readScript ./wm-install/install/wmInstallScript
+```
+
 
 Make sure to change license file locations and names if you use this install script. For the database connection user/password I use WM1011/WM1011, you will also need to update this is you confifured another database user/password.
 
